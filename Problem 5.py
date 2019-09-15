@@ -14,4 +14,3 @@ for i in a:
     res *= i
 
 print(res)
-

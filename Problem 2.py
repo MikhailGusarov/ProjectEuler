@@ -4,10 +4,10 @@
 Найдите сумму всех четных элементов ряда Фибоначчи, которые не превышают четыре миллиона."""
 
 a = []
-for i in range(1,35):
+for i in range(1, 35):
 	if i < 3:
 		a.append(i)
 	else:
-		a.append(a[i-3]+ a[i-2])
+		a.append(a[i-3] + a[i-2])
 print(sum(i for i in a if i % 2 == 0 and i < 4000000))
 
