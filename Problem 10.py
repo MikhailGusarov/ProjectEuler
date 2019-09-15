@@ -7,9 +7,9 @@ num = 3
 
 while num < 200000:
     for i in arr:
-        if num % i == 0:
+        if (num / i) - (num // i) == 0:
             break
-        elif num % i != 0 and i == arr[len(arr)-1]:
+        elif (num / i < i) and i == arr[len(arr)-1]:
             arr.append(num)
     num += 2
 print(sum(arr))
