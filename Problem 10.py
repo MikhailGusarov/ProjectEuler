@@ -1,16 +1,12 @@
 """Сумма простых чисел меньше 10 равна 2 + 3 + 5 + 7 = 17.
 
 Найдите сумму всех простых чисел меньше двух миллионов."""
+n = 2000000
+x = 0
+arr = list(range(2, n))
 
-arr = [2]
-num = 3
+while arr[x] ** 2 < n:
+    arr = arr[:x + 1] + [i for i in arr[x+1:] if i % arr[x] != 0]
+    x += 1
 
-while num < 200000:
-    for i in arr:
-        if (num / i) - (num // i) == 0:
-            break
-        elif (num / i < i) and i == arr[len(arr)-1]:
-            arr.append(num)
-    num += 2
 print(sum(arr))
-
