@@ -53,39 +53,28 @@ count = 4
 maxi = 0
 
 for i in range(len(arr)):
-    for j in range(len(arr[i])):
-        if j + count == len(arr[i]):
-            break
+    for j in range(len(arr[i]) - count + 1):
         step = int(arr[i][j]) * int(arr[i][j+1]) * int(arr[i][j+2]) * int(arr[i][j+3])
         if step > maxi:
             maxi = step
 
-    if i - 1 == len(arr):
-        break
 
-for i in range(len(arr)):
+for i in range(len(arr) - count + 1):
     for j in range(len(arr[i])):
-        if j + count == len(arr[i]):
-            break
+        step = int(arr[i][j]) * int(arr[i+1][j]) * int(arr[i+2][j]) * int(arr[i+3][j])
+        if step > maxi:
+            maxi = step
+    for j in range(len(arr[i]) - count + 1):
         step = int(arr[i][j]) * int(arr[i+1][j+1]) * int(arr[i+2][j+2]) * int(arr[i+3][j+3])
         if step > maxi:
             maxi = step
 
-    if i + count == len(arr):
-        break
 
-for i in range(len(arr)):
-    for j in range(len(arr[i])):
-        if j - 1 == len(arr[i]):
-            break
-        step = int(arr[i][j]) * int(arr[i+1][j]) * int(arr[i+2][j]) * int(arr[i+3][j])
+for i in range(len(arr), -1, 3):
+    for j in range(len(arr), -1, 3):
+        step = int(arr[i][j]) * int(arr[i - 1][j - 1]) * int(arr[i - 2][j - 2]) * int(arr[i - 3][j - 3])
         if step > maxi:
             maxi = step
-
-    if i + count == len(arr):
-        break
-
-
 
 print(maxi)
 
