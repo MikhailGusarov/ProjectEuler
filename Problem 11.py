@@ -78,3 +78,5 @@ for i in range(len(arr), -1, 3):
 
 print(maxi)
 
+# задача решена неверно
+

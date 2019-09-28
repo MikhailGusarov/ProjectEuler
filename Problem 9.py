@@ -18,3 +18,6 @@ def special_three_pythagoras() -> int:
             if i + j + c == 1000:
                 return i * j * int(c)
 
+
+print(special_three_pythagoras())
+
