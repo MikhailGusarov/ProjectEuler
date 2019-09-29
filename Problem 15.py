@@ -3,10 +3,14 @@
 существует ровно 6 маршрутов до правого нижнего угла сетки.
 Сколько существует таких маршрутов в сетке 20×20?"""
 
-w = 2
-h = 2
+# решать через Биномиальное распределение
 
+import math
 
-def count_step(height, width):
-    pass
+sq = 20
+
+rez = math.factorial(2 * sq) // (math.factorial(sq) * math.factorial((2* sq -sq)))
+
+print(rez)
+
 
