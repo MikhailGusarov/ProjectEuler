@@ -4,13 +4,10 @@
 Сколько существует таких маршрутов в сетке 20×20?"""
 
 # решать через Биномиальное распределение
-
 import math
 
 sq = 20
 
-rez = math.factorial(2 * sq) // (math.factorial(sq) * math.factorial((2* sq -sq)))
+rez = math.factorial(2 * sq) // (math.factorial(sq) * math.factorial((2 * sq - sq)))
 
 print(rez)
-
-

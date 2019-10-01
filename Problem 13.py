@@ -105,5 +105,3 @@ arr = str_arr.split('''
 arr = list(map(int, arr))
 
 print(str(sum(arr))[0:10])
-
-

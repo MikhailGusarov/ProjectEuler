@@ -23,4 +23,3 @@ for i in range(2, 1000000):
 print(max(rez.values()))
 
 print(list(rez.keys())[list(rez.values()).index(max(rez.values()))])
-

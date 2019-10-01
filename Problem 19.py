@@ -1,17 +1,17 @@
+day_of_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
-day_of_month = [31,28,31,30,31,30,31,31,30,31,30,31]
 
 # проверка на високосный год
 def is_leap_year(year):
-    if year % 400 == 0 and  str(year)[2:4] == '00':
+    if year % 400 == 0 and str(year)[2:4] == '00':
         return True
     if year % 4 == 0 and str(year)[2:4] != '00':
         return True
     return False
 
 
-
-if is_leap_year(1900): day_of_month[1] += 1
+if is_leap_year(1900):
+    day_of_month[1] += 1
 
 # 1 - понедельник, 7 - воскресенье
 start = (1 + 365) % 7
@@ -19,7 +19,7 @@ start = (1 + 365) % 7
 count_sunday = 0
 
 
-for i in range(1901,2001):
+for i in range(1901, 2001):
     if is_leap_year(1900):
         day_of_month[1] = 29
     else:
@@ -30,4 +30,3 @@ for i in range(1901,2001):
             count_sunday += 1
 
 print(count_sunday)
-
