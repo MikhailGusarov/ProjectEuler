@@ -70,13 +70,10 @@ for i in range(len(arr) - count + 1):
             maxi = step
 
 
-for i in range(len(arr), -1, 3):
-    for j in range(len(arr), -1, 3):
-        step = int(arr[i][j]) * int(arr[i - 1][j - 1]) * int(arr[i - 2][j - 2]) * int(arr[i - 3][j - 3])
+for i in range(len(arr) - count + 1):
+    for j in range(len(arr)-1, count - 1, -1):
+        step = int(arr[i][j]) * int(arr[i+1][j-1]) * int(arr[i+2][j-2]) * int(arr[i+3][j-3])
         if step > maxi:
             maxi = step
 
 print(maxi)
-
-# задача решена неверно
-
