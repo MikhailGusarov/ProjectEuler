@@ -1,12 +1,18 @@
-from decimal import Decimal
-arr = []
-long = 28
+res = 0
+pmax = 0
 
-for i in range(2,1000):
-    x = str(Decimal(1)/i)[2:]
-    if len(x) = long:
-        
-    arr.append(str(Decimal(1)/i)[2:])
+for i in range(3, 1000, 2):
+    if i % 5 == 0:
+        continue
+    p = 1
+    while (10 ** p) % i != 1:
+        p +=1
+
+    if p > pmax:
+        res = i
+        pmax = p
+
+print(res)
     
 
 
