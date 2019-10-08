@@ -1,7 +1,7 @@
 import itertools
 x = []
 y = '123'
-for i in range(4,10):
+for i in range(4, 10):
     y += str(i)
     x += list(itertools.permutations(y))
 x = [int(''.join(i)) for i in x if int(''.join(i)) % 2 != 0 ]
@@ -22,4 +22,4 @@ for i in range(3,1000000, 2):
                 if x[k] % i == 0:
                     x.pop(k)
             break
-print(max(x),len(x))
+print(max(x), len(x))
